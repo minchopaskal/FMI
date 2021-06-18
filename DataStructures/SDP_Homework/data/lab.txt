@@ -1,0 +1,7 @@
+6
+x x x x x x
+x x x 0 0 x
+x 0 x 0 e x
+x 0 x 0 0 x
+x 0 0 m x x
+x x x x x x

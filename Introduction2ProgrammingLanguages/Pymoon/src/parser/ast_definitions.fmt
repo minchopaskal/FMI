@@ -1,0 +1,77 @@
+asdl-builtin
+IDENTIFIER Identifier id String
+mod
+PY_MODULE PyModule body Vector<AstNodePtr>
+stmt
+STATEMENT Statement
+FUNCTION_DEF FunctionDefStatement name AstNodePtr args AstNodePtr body Vector<AstNodePtr> decorator_list Vector<AstNodePtr> returns AstNodePtr
+ASYNC_FUNCTION_DEF AsyncFunctionDefStatement name AstNodePtr args AstNodePtr body Vector<AstNodePtr> decorator_list Vector<AstNodePtr> returns AstNodePtr
+CLASS_DEF ClassDefStatement name AstNodePtr bases Vector<AstNodePtr> keywords Vector<AstNodePtr> body Vector<AstNodePtr> decorator_list Vector<AstNodePtr>
+RETURN ReturnStatement value AstNodePtr
+DELETE DeleteStatement targets Vector<AstNodePtr>
+ASSIGN AssignStatement targets Vector<AstNodePtr> values Vector<AstNodePtr>
+AUG_ASSIGN AugAssignStatement target AstNodePtr op Operator value AstNodePtr
+FOR ForStatement target AstNodePtr iter AstNodePtr body Vector<AstNodePtr> orelse Vector<AstNodePtr>
+ASYNC_FOR AsyncForStatement target AstNodePtr iter AstNodePtr body Vector<AstNodePtr> orelse Vector<AstNodePtr>
+WHILE WhileStatement test AstNodePtr body Vector<AstNodePtr> orelse Vector<AstNodePtr>
+IF IfStatement test AstNodePtr body Vector<AstNodePtr> orelse Vector<AstNodePtr>
+WITH WithStatement items Vector<AstNodePtr> body Vector<AstNodePtr>
+ASYNC_WITH AsyncWithStatement items Vector<AstNodePtr> body Vector<AstNodePtr>
+RAISE RaiseStatement exc AstNodePtr cause AstNodePtr
+TRY TryStatement body Vector<AstNodePtr> handlers Vector<AstNodePtr> orelse Vector<AstNodePtr> finalbody Vector<AstNodePtr>
+ASSERT AssertStatement test AstNodePtr msg AstNodePtr
+IMPORT ImportStatement names Vector<AstNodePtr>
+IMPORT_FROM ImportFromStatement module AstNodePtr names Vector<AstNodePtr> level int
+GLOBAL GlobalStatement names Vector<AstNodePtr>
+NONLOCAL NonlocalStatement names Vector<AstNodePtr>
+EXPR ExprStatement value AstNodePtr
+PASS PassStatement
+BREAK BreakStatement
+CONTINUE ContinueStatement
+expr
+EXPRESSION Expression
+BOOL_OP BoolOpExpression op BoolOp values Vector<AstNodePtr>
+BIN_OP BinOpExpression left AstNodePtr op Operator right AstNodePtr
+UNARY_OP UnaryOpExpression op UnaryOp operand AstNodePtr
+LAMBDA LambdaExpression args AstNodePtr body AstNodePtr
+IF_EXP IfExpression test AstNodePtr body AstNodePtr orelse AstNodePtr
+DICT DictExpression keys Vector<AstNodePtr> values Vector<AstNodePtr>
+SET SetExpression elts Vector<AstNodePtr>
+LIST_COMP ListCompExpression elt AstNodePtr generators Vector<AstNodePtr>
+SET_COMP SetCompExpression elt AstNodePtr generators Vector<AstNodePtr>
+DICT_COMP DictCompExpression key AstNodePtr elt AstNodePtr generators Vector<AstNodePtr>
+GENERATR_EXPR GeneratorExpression elt AstNodePtr generators Vector<AstNodePtr>
+AWAIT AwaitExpression value AstNodePtr
+YIELD YieldExpression value Vector<AstNodePtr>
+YIELD_FROM YieldFromExpression value AstNodePtr
+COMPARE CompareExpression left AstNodePtr ops Vector<CmpOp> comparators Vector<AstNodePtr>
+CALL CallExpression func AstNodePtr args Vector<AstNodePtr> keywords Vector<AstNodePtr>
+NUM NumExpression n double
+STR StrExpression s String
+NAME_CONSTANT NameConstantExpression value SingletonTokenType
+ELLIPSIS EllipsisExpression
+ATTRIBUTE AttributeExpression value AstNodePtr attr AstNodePtr ctx ExprContext
+SUBSCRIPT SubscriptExpression value AstNodePtr slice AstNodePtr ctx ExprContext
+STARRED StarredExpression value AstNodePtr ctx ExprContext
+NAME NameExpression id AstNodePtr ctx ExprContext
+LIST ListExpression elts Vector<AstNodePtr> ctx ExprContext
+TUPLE TupleExpression elts Vector<AstNodePtr> ctx ExprContext
+slice
+SLICE Slice lower AstNodePtr upper AstNodePtr step AstNodePtr
+EXT_SLICE ExtSlice dims Vector<AstNodePtr>
+INDEX IndexSlice value AstNodePtr
+comprehension
+COMPREHENSION Comprehension target AstNodePtr iter AstNodePtr ifs Vector<AstNodePtr>
+excepthandler
+EXCEPT_HANDLER ExceptHandler type AstNodePtr name AstNodePtr body AstNodePtr
+arguments
+ARGUMENTS Arguments args Vector<AstNodePtr> vararg AstNodePtr kwarg AstNodePtr defaults Vector<AstNodePtr>
+arg
+ARG Arg arg AstNodePtr annotation AstNodePtr
+keyword
+KEYWORD Keyword arg AstNodePtr value AstNodePtr
+alias
+ALIAS Alias name AstNodePtr asname AstNodePtr
+withitem
+WITH_ITEM WithItem context_expr AstNodePtr optional_var AstNodePtr
+DECORATOR Decorator id AstNodePtr args Vector<AstNodePtr>

@@ -1,0 +1,17 @@
+.idea/*
+CMakeLists.txt
+DS_Implementations/cmake-build-debug/*
+DS_Implementations/CMakeLists.txt
+DS_Implementations/.idea/*
+Functional/bin/*
+Functional/CmakeLists.txt
+SDP_Homework/.idea/*
+SDP_Homework/cmake-build-debug/*
+SDP_Homework/CMakeLists.txt
+SDP_Homework/*.pdf
+SDP_HW2/bin/*
+SDP_HW2/CMakeFiles/*
+SDP_HW2/*.txt
+SDP_HW2/*.cmake
+SDP_HW2/*.o
+SDP_HW2/Makefile
